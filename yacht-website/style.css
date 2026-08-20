@@ -4,9 +4,32 @@ body {
 }
 
 h1 {
-    font-size: 80px;
-    color: red;
+    font-size: 2.5rem;
+    color: #e6e6e6;
     font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #b0b0b8;
+    font-size: 1.4rem;
+}
+
+.chapter-section {
+    text-align: center;
+    background-color: grey;
+    color: #e6e6e6;
+    width: 50%;
+    justify-self: center;
+    padding: 5px;
+    margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+p {
+    font-size: 20px;
+    color: #e6e6e6;
 }
 
 /* =======================
@@ -53,29 +76,156 @@ nav a:hover {
     border-bottom: 2px solid #e6e6e6;
 }
 
-
-/*
-.chapter-section {
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    margin: 80px auto;
-    max-width: 800px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    padding: 2rem;
+    padding-top: 60;
+    background-image: url(./images/yacht.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
-.chapter-section h2 {
-    font-size: 24px;
-    margin-bottom: 5px;
-    border-bottom: 2px solid #e6e6e6;
-    padding-bottom: 5px;
-    display: inline-block;
-    color: #e6e6e6;
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
 }
 
-.chapter-section p {
+.header-content, 
+.button-container {
+    position: relative;
+    z-index: 1;
+}
+
+button {
+    text-transform: uppercase;
+    position: relative;
+    border: none;
     font-size: 18px;
-    line-height: 1.6;
+    transform: 0.2s;
+    background-color: 0.2s;
+    outline: none;
+    border-radius: 3px;
+    margin: 0 10px;
+    padding: 23px 33px;
+    border: 3px solid transparent;
+}
+
+button:active {
+    transform: translate(3px);
+}
+
+button::after,
+button::after {
+    border-radius: 3px;
+}
+
+.shrink-border {
+    background-color: transparent;
+    color: #d3d3d3;
+}
+
+.shrink-border:hover {
+    background-color: transparent;
+    box-shadow: none;
     color: #e6e6e6;
 }
-    */
+
+.shrink-border::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #959595;
+
+    transition: opacity 0.3s, border 0.3s;
+}
+
+.shrink-border:hover::before {
+    opacity: 0;
+}
+
+.shrink-border::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 3px solid #e6e6e6;
+    opacity: 0;
+    z-index: -1;
+    transform: scaleX(1.1) scaleY(1.3);
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.shrink-border:hover::after {
+    opacity: 1;
+    transform: scaleX(1) scaleY(1);
+}
+
+/* Footer content */
+
+footer {
+    background-color: #1b1b20;
+    padding: 40px 0;
+    color: #e6e6e6;
+}
+
+.footer-content {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #e6e6e6;
+    transform: color 0.3s;
+}
+
+.footer-links a:hover {
+    text-decoration: none;
+    color: #2b6289;
+    transform: color 0.3s;
+}
+
+.footer-social {
+    margin-top: 0;
+}
+
+.footer-social a {
+    color: #e6e6e6;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #2b6289
+}
+
