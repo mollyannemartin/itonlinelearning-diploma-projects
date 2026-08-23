@@ -8,14 +8,32 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styling */
+header {
+    background-color: #333;
+    padding: 1rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo h1 {
+    color: #fff;
+    font-size: 1.5rem;
 }
 
 /* Navigation Styling */
 .nav-container {
-    background-color: #333;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
+    padding: 0;
 }
 
 nav ul {
@@ -36,33 +54,21 @@ nav a:hover {
     color: #ffd700;
 }
 
-/* Header Styling */
-header {
-    text-align: center;
-    padding: 3rem 1rem;
-    background-color: #fff;
-    margin-bottom: 2rem;
-}
-
-header h1 {
-    color: #333;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.subtitle {
-    color: #666;
-    font-size: 1.2rem;
-}
-
 /* Main Content Styling */
 main {
-    max-width: 800px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    flex: 1;
+    padding: 120px 1rem 2rem;
+    max-width: 1000px;
+    width: 100%;
     margin: 0 auto;
-    padding: 0 1rem;
 }
 
-.about-section, .services-section, .contact-section {
+.about-section, 
+.services-section, 
+.contact-section {
     background-color: white;
     padding: 2rem;
     margin-bottom: 2rem;
@@ -99,5 +105,13 @@ footer {
     padding: 2rem;
     background-color: #333;
     color: white;
-    margin-top: 2rem;
+    margin-top: auto;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer a {
+    color: white;
 }
