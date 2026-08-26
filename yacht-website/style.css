@@ -281,3 +281,44 @@ footer {
     text-align: center;
     padding: 50px 20px;
 }
+
+/*=====================
+  Tour Page
+=====================*/
+.tour-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.tour-content h2 {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.tour-button {
+    align-self: flex-end;
+}
+
+.tour-button-controller {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.tour-button {
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background-color: #1b1b20;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tour-button:hover {
+    background-color: #2b6289;
+}
