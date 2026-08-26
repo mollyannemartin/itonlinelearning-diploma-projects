@@ -6,6 +6,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     </head>
     <body>
         <nav>
@@ -18,6 +20,75 @@
             </ul>
         </nav>
         <h1>Elegant Yachting Tours</h1>
+        <div class="contact">
+            <div class="contact-box">
+                <h2>Send us a message:</h2>
+                <form action="./phpfile.php" method="post">
+                <!--This is input boxes e.g. names-->
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstname" value="E.g Jane">
+
+                    <label for="surname">Surname</label>
+                    <input type="text" id="surname" name="surname" value="E.g Doe">
+
+                <!--This is a radio e.g. multiple choice - Only select one answer-->
+                    <input 
+                    type="radio" 
+                    id="option1" 
+                    name="fav-video-game" 
+                    value="Mario Kart"
+                    />
+                    <label for="option1">Mario Kart</label>
+
+                    <input 
+                    type="radio" 
+                    id="option2" 
+                    name="fav-video-game" 
+                    value="Legacies"
+                    />
+                    <label for="option2">Legacies</label>
+
+                    <input 
+                    type="radio" 
+                    id="option3" 
+                    name="fav-video-game" 
+                    value="Minecraft"
+                    />
+                    <label for="option3">Minecraft</label>
+
+
+                <!--This is a checkbox - can select multiple at once-->
+                    <input 
+                    type="checkbox" 
+                    id="option1" 
+                    name="option1" 
+                    value="Mario Kart"
+                    />
+                    <label for="option1">Mario Kart</label>
+
+                    <input 
+                    type="checkbox" 
+                    id="option2" 
+                    name="option2" 
+                    value="Legacies"
+                    />
+                    <label for="option2">Legacies</label>
+
+                    <input 
+                    type="checkbox" 
+                    id="option3" 
+                    name="option3" 
+                    value="Minecraft"
+                    />
+                    <label for="option3">Minecraft</label>
+
+                    <input type="submit">
+
+
+
+                </form>
+            </div>
+        </div>
 
 
         <!--This is a footer section-->
